@@ -4,6 +4,7 @@ def main():
 	loc = input('Enter file name(with location): ')
 	row = int(input('Enter no. of rows to be copied(>0)'))
 	col = int(input('Enter no. of columns to be copied(>0)'))
+	assert col > 0 & row > 0, 'Row and Column must be greater than 0'
 	try:
 		wb = openpyxl.load_workbook(loc)
 		sheet = wb.active
